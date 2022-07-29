@@ -12,30 +12,30 @@ plugins:
   - serverless-dotenv-plugin
 
 functions:
-  listCourses:
-    handler: courseRouter.getCourse
+  getCourses:
+    handler: ./router/courseWebRouter.getCourses
     events:
       - httpApi:
-          path: /courses
+          path: /api/courses
           method: get
 
-  addCourse:
-    handler: courseRouter.addCourse
+  postCourse:
+    handler: ./router/courseWebRouter.postCourse
     events:
       - httpApi:
-          path: /new-course
+          path: /api/course
           method: post
 
-  updateCourse:
-    handler: courseRouter.updateCourse
+  putCourse:
+    handler: ./router/courseWebRouter.putCourse
     events:
       - httpApi:
-          path: /course/{id}
+          path: /api/course/{id}
           method: put
 
   deleteCourse:
-    handler: courseRouter.deleteCourse
+    handler: ./router/courseWebRouter.deleteCourse
     events:
       - httpApi:
-          path: /course/{id}
+          path: /api/course/{id}
           method: delete

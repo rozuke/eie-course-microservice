@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "serverless offline start",
+    "deploy": "serverless deploy"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +20,6 @@
   },
   "devDependencies": {
     "serverless-dotenv-plugin": "^4.0.1",
-    "serverless-offline": "^5.9.0"
+    "serverless-offline": "^8.8.0"
   }
 }
