@@ -39,3 +39,24 @@ functions:
       - httpApi:
           path: /api/course/{id}
           method: delete
+
+  getUsersByCourse:
+    handler: ./router/courseWebRouter.getUsersByCourse
+    events:
+      - httpApi:
+          path: /api/course/{id}/users
+          method: get
+
+  getCoursesByTeacher:
+    handler: ./router/courseWebRouter.getCoursesByTeacher
+    events:
+      - httpApi:
+          path: /api/teacher/{id}/courses
+          method: get
+
+  getStudentsResultByCourse:
+    handler: ./router/courseWebRouter.getStudentsResultByCourse
+    events:
+      - httpApi:
+          path: /api/course/{id}/students-result
+          method: get
